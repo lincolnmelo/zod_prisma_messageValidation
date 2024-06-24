@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model MSGConversations {
+  id            String    @id @default(uuid()) @map("_id")
+  idPage        String
+  time          Int
+  messaging     String
+  receivedSend  Int
+  createdAt     DateTime  @default(now())
+}
