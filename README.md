@@ -8,9 +8,9 @@
 #### Navegue até a pasta onde o projeto foi clonado, abra o terminal e execute os seguintes comandos:
 
 ```
-docker build -t 4Linck/poc-smarters .
+docker build -t 4Linck/message-validation .
 
-docker run -p 3000:3000 4Linck/poc-smarters
+docker run -p 3000:3000 4Linck/message-validation 
 ```
 
 ### Iniciando sem docker
@@ -42,8 +42,9 @@ npx prisma studio
 Caso venha a ter problemas para executar o Prisma Studio, verifique as **devDependencies**, no arquivo package.json!
 
 **Exemplo: Prisma Studio**
+
 ![alt text](image.png)
-9
+
 ## Endpoints e parâmetros de requisição
 ### A aplicação possui apenas um endpoint "/api/message" que responde requisições do tipo GET e POST, GET para consultar a lista de mensagens enviadas e recebidas, e POST para enviar mensagens.
 
